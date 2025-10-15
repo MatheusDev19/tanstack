@@ -1,12 +1,12 @@
 import { useQuery, type DefaultOptions } from "@tanstack/react-query";
-import { useGetUsersService } from "./use-get-users.service";
-import type { IUser } from "./use-get-users.type";
 import type { ResponseError } from "../../types/ResponseError";
+import { useGetUsersService } from "../../services/get-users/use-get-users.service";
+import type { User } from "../../interfaces/User";
 
 export const getUsersKey = ["users"]
 
-export function useGetUsers(queryOptions?: DefaultOptions<IUser[]>) {
-    return useQuery<IUser[], ResponseError>({
+export function useGetUsers(queryOptions?: DefaultOptions<User[]>) {
+    return useQuery<User[], ResponseError>({
         queryKey: getUsersKey,
         queryFn: useGetUsersService,
         ...queryOptions
