@@ -1,29 +1,16 @@
 import { Box, Text } from "@mantine/core";
 import "./App.css";
-import { useEffect } from "react";
+import { useGetUsers } from "./hooks/get-users/use-get-users";
 
 function App() {
-  async function getData() {
-    const url = "http://localhost:3000/posts";
-    try {
-      const response = await fetch(url);
-      if (!response.ok) {
-        throw new Error(`Response status: ${response.status}`);
-      }
-      return response.json();
-    } catch (error) {
-      console.error(error);
-    }
-  }
-
-  useEffect(() => {
-    getData();
-  }, []);
+  const { data, isPending } = useGetUsers();
 
   return (
     <>
       <Box>
-        <Text size="lg">Welcome to Mantine + Vite + React + TS!</Text>
+        {isPending && <Text>Carregando</Text>}
+        <Text size="lg">{data?.[0].name}</Text>
+        <Text size="lg">{data?.[0].age}</Text>
       </Box>
     </>
   );

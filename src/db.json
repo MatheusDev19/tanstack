@@ -1,13 +1,26 @@
 {
-  "posts": [
-    { "id": "1", "title": "a title", "views": 100 },
-    { "id": "2", "title": "another title", "views": 200 }
+  "users": [
+    { "id": "1", "name": "Matheus de Oliveira", "age": 19, "profession_id": "1" },
+    { "id": "2", "name": "Davi de Oliveira", "age": 15, "profession_id": "2" },
+    { "id": "3", "name": "Camila de Oliveira", "age": 26, "profession_id": "3" },
+    { "id": "4", "name": "David de Oliveira", "age": 34, "profession_id": "4" },
+    { "id": "5", "name": "Emerson de Oliveira", "age": 29, "profession_id": "5" },
+    { "id": "6", "name": "Alex de Oliveira", "age": 29, "profession_id": "6" }
   ],
-  "comments": [
-    { "id": "1", "text": "a comment about post 1", "postId": "1" },
-    { "id": "2", "text": "another comment about post 1", "postId": "1" }
+  "profession": [
+    { "id": "1", "name": "Software Engineer" },
+    { "id": "2", "name": "Data Scientist" },
+    { "id": "3", "name": "Product Manager" },
+    { "id": "4", "name": "UX Designer" },
+    { "id": "5", "name": "DevOps Engineer" },
+    { "id": "6", "name": "QA Engineer" }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "reels": [
+    { "id": "1", "title": "New Reel", "userId": "1" },
+    { "id": "2", "title": "Old Reel", "userId": "2" },
+    { "id": "3", "title": "Popular Reel", "userId": "3" },
+    { "id": "4", "title": "Unpopular Reel", "userId": "4" },
+    { "id": "5", "title": "Trending Reel", "userId": "5" },
+    { "id": "6", "title": "Random Reel", "userId": "6" }
+  ]
 }
