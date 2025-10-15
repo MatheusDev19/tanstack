@@ -2,6 +2,8 @@ import { Box, Text } from "@mantine/core";
 import "./App.css";
 
 function App() {
+  
+
   return (
     <>
       <Box>
